@@ -38,11 +38,11 @@
                 currentTitle:'全部',
                 active:this.activeIndex,
                 tabs:[
-                    {
-                        type: '全部',
-                        view: 'AllOrder',
-
-                    },
+                    // {
+                    //     type: '全部',
+                    //     view: 'AllOrder',
+                    //
+                    // },
                     {
                         type: '待付款',
                         view: 'ObligationOrder',
@@ -150,7 +150,8 @@
     .top ul li {
 
         line-height:0.9rem;
-        width: 16.6666%;
+        /*width: 16.6666%;*/
+        width: 20%;
         text-align: center;
 
         float:left;

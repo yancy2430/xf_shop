@@ -99,7 +99,7 @@
                         offset: 1,
                         limit: 10,
                         userId:this.userId,
-                        // status :9
+                        status :9
                     }), config)
                 .then((res) => {
                     console.log(res.data.data.rows);
