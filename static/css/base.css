@@ -1,0 +1,95 @@
+@charset "utf-8";
+* {
+    padding: 0;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+span {
+  margin: 0; padding: 0;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+ul li {
+  list-style: none;
+
+}
+p {
+    margin: 0;
+}
+ body {
+
+   background: #f8f8f8;
+   width: 100%;
+   font-family: PingFang-SC-Medium;
+   font-size: 0.3rem;
+ }
+
+.set {
+   /*padding-top:60px;*/
+}
+ /*  通用的 模版 */
+.warranty,.setLocation{
+  margin: 0 0.24rem;
+}
+
+
+
+ input {
+   background: none;
+ }
+ /*  注册 登录前面的小图标 */
+.telpass img{
+  width: 0.45rem;
+  /*padding-top: 7px;*/
+}
+
+
+
+ /* 响应式  设置 */
+/*平板电脑与小屏电脑之间的分辨率*/
+@media screen and (max-width:1920px) {
+   .header {
+     height: 80px;
+     line-height: 80px;
+     font-size: 28px;
+
+
+
+
+   }
+}
+/*横向放置的手机和竖向放置的平板之间的分辨率*/
+@media screen and (max-width:767px) {
+  .header {
+     height: 70px;
+    line-height: 70px;
+    font-size: 26px;
+
+
+  }
+
+}
+
+/*竖向放置的手机以及分别率*/
+@media screen and (max-width: 480px) {
+  .header {
+      height: 60px;
+      line-height: 60px;
+      font-size: 24px;
+
+
+  }
+
+}
+
+
+
+.bottom2 {
+  border-bottom: 2px solid #eee;
+}
