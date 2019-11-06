@@ -290,7 +290,7 @@
 
                  //let url = 'http://xiaofeng.ckugua.com/index.html' //获取锚点之前的链接
                 // console.log(url)
-                _this.$Ajax.post('webchat/config?url=http://xiaofeng.ckugua.com/index.html').then(response => {
+                _this.$Ajax.post('webchat/config?url=http%3a%2f%2fxiaofeng.ckugua.com%2findex.html').then(response => {
                     // console.log(response)
                     let res = JSON.parse(response.data.data);
                     console.log(res)

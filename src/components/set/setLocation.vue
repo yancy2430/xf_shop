@@ -8,8 +8,8 @@
                 </li>
                 <li>
                   <label>手机号</label>
-                  <input type="text"  v-model="phone" placeholder="" class="iphone">
-                  <span>+86</span>
+                    <span>+86</span>
+                    <input type="text"  v-model="phone" placeholder="" class="iphone">
                 <li>
                   <label>所在地区</label>
                   <input type="text"  v-model="site" class="iphone">
@@ -18,7 +18,6 @@
           </ul>
         <div class="street">
             <textarea   v-model="sites" placeholder="详细地址：如道路、门牌号、小区、楼洞号等">
-
             </textarea>
         </div>
         <div class="switch">

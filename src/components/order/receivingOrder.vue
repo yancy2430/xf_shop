@@ -91,8 +91,11 @@
                     var shopLists = res.data.data.rows;
                     for(var i=0;i<shopLists.length;i++){
                         let dis = shopLists[i]
-                        let orderImg = dis.orderImg.split(",")[0]
-                        dis.orderImg  =orderImg
+                        if (dis.orderImg) {
+                            let orderImg = dis.orderImg.split(",")[0]
+                            dis.orderImg  =orderImg
+                        }
+
                     }
                     this.shopLists = shopLists
                     console.log(this.pid)

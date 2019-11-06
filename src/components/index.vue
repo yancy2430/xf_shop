@@ -75,10 +75,16 @@
         },
         // 加载完成后 取页面初始化所需的数据
         created() {
+
             // 获取用户id
             var name = window.localStorage.getItem(this.GLOBAL.CODE);
             this.userId = name
 
+            if (!this.GLOBAL.CODE){
+                let nowUrl = 'http://xiaofeng.ckugua.com/h5/index.html';
+                window.location.href = 'http://xiaofeng.ckugua.com/webchat/authorize?url=' + nowUrl
+                console.log(nowUrl)
+            }
 
             // 商品列表
             //跳转到商品界面

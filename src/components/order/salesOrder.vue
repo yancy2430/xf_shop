@@ -79,8 +79,11 @@
                 var shopLists = res.data.data.rows;
                 for(var i=0;i<shopLists.length;i++){
                     let dis = shopLists[i]
-                    let orderImg = dis.orderImg.split(",")[0]
-                    dis.orderImg  =orderImg
+                    if (dis.orderImg) {
+                        let orderImg = dis.orderImg.split(",")[0]
+                        dis.orderImg  =orderImg
+                    }
+
 
                     var integralResist = dis.integralResist
                     this.integralResist =integralResist
@@ -88,8 +91,6 @@
                     this.totalprice =totalprice
                     var freight =dis.freight
                     this.freight =freight
-
-
 
                 }
                 this.shopLists = shopLists

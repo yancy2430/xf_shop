@@ -151,10 +151,12 @@
             .then((res) => {
                 // console.log(res.data.data);
                 var shopLists = res.data.data;
-                var orderImg = shopLists.orderImg.split(",")[0]
+                if (shopLists.orderImg){
+                    var orderImg = shopLists.orderImg.split(",")[0]
+                    shopLists.orderImg = orderImg
+                }
                 var integralResist =shopLists.integralResist /100
 
-                shopLists.orderImg = orderImg
 
 
                 shopLists.integralResist = integralResist

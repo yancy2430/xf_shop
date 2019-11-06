@@ -4,7 +4,7 @@
      <ul>
        <li class="h170" @click="nameImgIn">
            <label>头像</label>
-           <img src="/static/images/usre-1.png" alt="" class="img">
+           <img :src="headimgurl" alt="" class="img">
 
        </li>
        <li @click="usernames">
@@ -76,6 +76,7 @@
                 phone:this.phone,
                 wechat:'',
                 email:'',
+                headimgurl:"",
                 profile:''
 
 
@@ -87,6 +88,7 @@
             var userId = window.localStorage.getItem(this.GLOBAL.CODE);
             // console.log(userId)
             this.userId = this.GLOBAL.USERINFO.userId;
+            this.headimgurl = this.GLOBAL.USERINFO.headImgUrl;
             // 获取账户的用户名
             var name = window.localStorage.getItem(this.GLOBAL.NAME);
             // console.log(name)
@@ -120,6 +122,7 @@
                     self.username = self.amendname
                     self.amendname ="";
                     window.localStorage.setItem(this.GLOBAL.NAME, self.username);
+
                     // var name = window.localStorage.getItem(this.GLOBAL.NAME)
                     // console.log("用户名:"+name)
 

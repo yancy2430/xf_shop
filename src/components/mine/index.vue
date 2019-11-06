@@ -121,7 +121,8 @@
             console.log(res)
               this.GLOBAL.USERINFO = res.data.data
               this.GLOBAL.CODE = res.data.data.openId
-              window.localStorage.setItem(this.GLOBAL.CODE,res.data.data)
+              console.log(res.data.data)
+              window.localStorage.setItem(this.GLOBAL.CODE,JSON.stringify(res.data.data))
 
               this.show = false
               this.name = res.data.data.name

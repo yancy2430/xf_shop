@@ -99,18 +99,20 @@
                         offset: 1,
                         limit: 10,
                         userId:this.userId,
-                        status :9
+                        // status :9
                     }), config)
                 .then((res) => {
-                    // console.log(res.data.data.rows);
+                    console.log(res.data.data.rows);
                     var shopLists = res.data.data.rows;
                     for(var i=0;i<shopLists.length;i++){
                         let dis = shopLists[i]
-                        let orderImg = dis.orderImg.split(",")[0]
-                        dis.orderImg  =orderImg
+                        if (dis.orderImg) {
+                            let orderImg = dis.orderImg.split(",")[0]
+                            dis.orderImg  =orderImg
+                        }
+
                     }
                     this.shopLists = shopLists
-                    console.log(this.pid)
                 })
                 .catch((error) => {
                     console.log(error)
