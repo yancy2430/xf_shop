@@ -288,9 +288,9 @@
                 var _this=this;
                 let url = location.href.split('?')[0] //获取锚点之前的链接
 
-                 //let url = 'http://xiaofeng.ckugua.com/index.html' //获取锚点之前的链接
+                 //let url = 'http://shop.xf-health.com/index.html' //获取锚点之前的链接
                 // console.log(url)
-                _this.$Ajax.post('webchat/config?url=http%3a%2f%2fxiaofeng.ckugua.com%2findex.html').then(response => {
+                _this.$Ajax.post('webchat/config?url=http%3a%2f%2fshop.xf-health.com%2findex.html').then(response => {
                     // console.log(response)
                     let res = JSON.parse(response.data.data);
                     console.log(res)
@@ -303,7 +303,7 @@
                 let url = location.href.split('?')[0] //获取锚点之前的链接
                 console.log(url)
                 // let links = url+'#/Food/' + this.$route.params.id;
-                let links = 'http://xiaofeng.ckugua.com/index.html/#/product/productDetails?pid=/'+_this.$route.query.pid;
+                let links = 'http://shop.xf-health.com/index.html/#/product/productDetails?pid=/'+_this.$route.query.pid;
                 let title = '晓峰科技';
                 let desc = '了解更多，请关注“晓峰科技”公众号';
                 let imgUrl = _this.$route.query.imgmore;

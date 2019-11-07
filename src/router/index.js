@@ -72,7 +72,7 @@ Vue.component('purchase',Purchase)
 
 // // 数据请求
 // import  Axios from 'axios'
-// Axios.defaults.baseURL = 'http://xiaofeng.ckugua.com/'
+// Axios.defaults.baseURL = 'http://shop.xf-health.com/'
 // Vue.prototype.$ajax = Axios
 // Vue.prototype.dataURL = function(file,title,id){
 //     id = (id === undefined )?'':id;

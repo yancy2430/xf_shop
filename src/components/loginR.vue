@@ -48,8 +48,8 @@
             }
         },
         created() {
-            let nowUrl = 'http://xiaofeng.ckugua.com/h5/index.html';
-            window.location.href = 'http://xiaofeng.ckugua.com/webchat/authorize?url=' + nowUrl
+            let nowUrl = 'http://shop.xf-health.com/h5/index.html';
+            window.location.href = 'http://shop.xf-health.com/webchat/authorize?url=' + nowUrl
             console.log(nowUrl)
         },
         methods: {
@@ -64,8 +64,8 @@
                 }
             },
             WeChatIn() {
-                let nowUrl = 'http://xiaofeng.ckugua.com/h5/index.html';
-                window.location.href = 'http://xiaofeng.ckugua.com/webchat/authorize?url=' + nowUrl
+                let nowUrl = 'http://shop.xf-health.com/h5/index.html';
+                window.location.href = 'http://shop.xf-health.com/webchat/authorize?url=' + nowUrl
                 console.log(nowUrl)
             },
         },

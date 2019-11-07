@@ -9,7 +9,7 @@ import router from './router'
 
 // 引用axios 请求数据
 import Axios from 'axios'
-Axios.defaults.baseURL = 'http://xiaofeng.ckugua.com/'
+Axios.defaults.baseURL = 'http://shop.xf-health.com/'
 Vue.prototype.$Ajax = Axios
 
 // 引用vuex

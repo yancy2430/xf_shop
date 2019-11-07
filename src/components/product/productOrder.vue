@@ -296,7 +296,7 @@
                                             .then((res) => {
                                                 // console.log(res.data.data);
                                                 if (res.data.data.status==1){
-                                                    window.location.href = 'http://xiaofeng.ckugua.com/h5/#/order/index'
+                                                    window.location.href = 'http://shop.xf-health.com/h5/#/order/index'
                                                 }
                                             })
                                             .catch((error) => {
@@ -314,7 +314,7 @@
                         else {
                             console.log(res.data.msg)
                             alert(res.data.msg)
-                            window.location.href = 'http://xiaofeng.ckugua.com/h5/#/order/index'
+                            window.location.href = 'http://shop.xf-health.com/h5/#/order/index'
                         }
 // this.$router.push({
 // path:'/order/index',

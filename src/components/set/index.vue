@@ -145,8 +145,8 @@
                   })
             },
             WeChatIn() {
-                let nowUrl='http://xiaofeng.ckugua.com/index.html';
-                window.location.href='http://xiaofeng.ckugua.com/webchat/authorize?url='+nowUrl
+                let nowUrl='http://shop.xf-health.com/index.html';
+                window.location.href='http://shop.xf-health.com/webchat/authorize?url='+nowUrl
                 console.log(nowUrl)
             },
             profileIn(){
