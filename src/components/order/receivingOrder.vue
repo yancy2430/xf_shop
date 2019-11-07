@@ -36,7 +36,7 @@
                     </div>
                 </div>
                 <div class="buts">
-                    <span class="at-once" @click="affirm">确认收货</span>
+                    <span class="at-once" @click="affirm(item)">确认收货</span>
                     <span class="cancel">查看物流</span>
 
                 </div>
@@ -84,7 +84,7 @@
                         offset: 1,
                         limit: 10,
                         userId:this.userId,
-                        status :9
+                        status :2
                     }), config)
                 .then((res) => {
                     // console.log(res.data.data.rows);
@@ -121,14 +121,14 @@
                 })
             },
             //   确认收货
-            affirm(){
-
+            affirm(item){
+                console.log(item)
                     var url = "/wx/get/order";
                     var config = {headers: {"Content-Type": "application/x-www-form-urlencoded;charset=utf-8"}};
                     //  数据交互
                     this.$Ajax.post(url,
                         this.$qs.stringify({
-                            orderid:this.orderid,
+                            orderid:item.id,
                         }), config)
                     .then((res) => {
                         console.log(res.data);

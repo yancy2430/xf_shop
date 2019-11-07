@@ -55,12 +55,12 @@
                 </li>
                 <li>
                     <span class="fl">运费：</span>
-                    <span class="fr">￥{{freight}}</span>
+                    <span class="fr">￥{{freight}}*{{totalcount}}</span>
                 </li>
-                <li @click="gralIn">
-                    <span class="fl">积分抵扣：</span>
-                    <span class="fr">￥{{integralResist}}</span>
-                </li>
+<!--                <li @click="gralIn">-->
+<!--                    <span class="fl">积分抵扣：</span>-->
+<!--                    <span class="fr">￥{{integralResist}}</span>-->
+<!--                </li>-->
                 <li>
                     <span class="fl">实付金额：</span>
                     <span class="fr">￥{{totalprices}}</span>

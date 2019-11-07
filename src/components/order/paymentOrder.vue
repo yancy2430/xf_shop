@@ -228,7 +228,7 @@
                     self.$qs.stringify({
                         orderNo:shopLists.ordersn,
                         orderAmount:shopLists.totalprice,
-                        openId:self.GLOBAL.OPENID
+                        openId:self.GLOBAL.USERINFO.openId
                     }))
                 .then((res)=>{
                     console.log(res)
@@ -243,13 +243,30 @@
                                 "paySign":res.data.data.paySign //微信签名
                             },
                             function(res){
-                                console.log(res)
-                                if(res.err_msg == "get_brand_wcpay_request:ok" ) {
-                                    alert('支付成功')
-                                } // 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回 ok，但并不保证它绝对可靠。
                             }
                         );
                     }
+                    setInterval(function () {
+                        // 获取数据  商品详情的
+                        var url = "wx/find/orderByNo";
+                        var config = {headers: {"Content-Type": "application/x-www-form-urlencoded;charset=utf-8"}};
+                        //  数据交互
+                        self.$Ajax.post(url,
+                            self.$qs.stringify({
+                                orderNo:shopLists.ordersn
+                            }), config)
+                            .then((res) => {
+                                // console.log(res.data.data);
+                                if (res.data.data.status==1){
+                                    window.location.href = 'http://xiaofeng.ckugua.com/h5/#/order/index'
+                                }
+                            })
+                            .catch((error) => {
+                                console.log(error)
+                            });
+
+
+                    }, 1000);
                 })
                 .catch((err)=>{
                     console.log(err)
