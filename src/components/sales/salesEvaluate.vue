@@ -27,27 +27,27 @@
             </div>
             <!--  图片上传-->
 
-            <div class="put">
-                <input @change="fileChange($event)" type="file" id="upload_file" multiple style="display: none"/>
-                <p>上传凭证</p>
-                <div class="imgShow">
-                    <div class="add-img" v-show="imgList.length">
-                        <ul class="img-list">
-                            <li v-for="(url,index) in imgList">
-                                <img class="del" src="" @click.stop="delImg(index)"/>
-                                <img :src="url.file.src">
-                            </li>
-                        </ul>
-                        <!--<p class="font14">图片(最多6张，还可上传<span v-text="6-imgList.length"></span>张)</p>-->
-                    </div>
-                </div>
-                <div class="add" @click="chooseType">
-                    <div class="add-image" align="center">
-                        <img src="/static/images/set.png" alt="">
-                    </div>
-                </div>
+            <!--<div class="put">-->
+                <!--<input @change="fileChange($event)" type="file" id="upload_file" multiple style="display: none"/>-->
+                <!--<p>上传凭证</p>-->
+                <!--<div class="imgShow">-->
+                    <!--<div class="add-img" v-show="imgList.length">-->
+                        <!--<ul class="img-list">-->
+                            <!--<li v-for="(url,index) in imgList">-->
+                                <!--<img class="del" src="" @click.stop="delImg(index)"/>-->
+                                <!--<img :src="url.file.src">-->
+                            <!--</li>-->
+                        <!--</ul>-->
+                        <!--&lt;!&ndash;<p class="font14">图片(最多6张，还可上传<span v-text="6-imgList.length"></span>张)</p>&ndash;&gt;-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="add" @click="chooseType">-->
+                    <!--<div class="add-image" align="center">-->
+                        <!--<img src="/static/images/set.png" alt="">-->
+                    <!--</div>-->
+                <!--</div>-->
 
-            </div>
+            <!--</div>-->
         </div>
         <button class="buy" :disabled="isDisable" @click="evaluateIn">提交申请</button>
     </div>
@@ -110,10 +110,10 @@
                     }), config)
                 .then((res) => {
                     console.log(res);
-                    // this.$router.push({
-                    //     path: '/sales/returnSuccess',
-                    //     name: 'returnSuccess',
-                    // })
+                    this.$router.push({
+                        path: '/sales/evaluationSuccess',
+                        name: 'evaluationSuccess',
+                    })
 
                 })
                 .catch((error) => {
